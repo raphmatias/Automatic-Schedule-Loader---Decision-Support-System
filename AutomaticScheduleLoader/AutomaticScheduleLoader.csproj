@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E17E6F4-42D6-49FD-976D-1E875401B70C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AutomaticScheduleLoader</RootNamespace>
+    <AssemblyName>AutomaticScheduleLoader</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccManagement.Designer.cs">
+      <DependentUpon>AccManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccManagementArchived.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccManagementArchived.Designer.cs">
+      <DependentUpon>AccManagementArchived.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivityLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivityLog.Designer.cs">
+      <DependentUpon>ActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubFrm.Designer.cs">
+      <DependentUpon>AddSubFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefSchedFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefSchedFrm.Designer.cs">
+      <DependentUpon>DefSchedFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyArchived.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyArchived.Designer.cs">
+      <DependentUpon>FacultyArchived.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFaculty.Designer.cs">
+      <DependentUpon>frmFaculty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubj.Designer.cs">
+      <DependentUpon>frmSubj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginActivity.Designer.cs">
+      <DependentUpon>LoginActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassConfirm.Designer.cs">
+      <DependentUpon>PassConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterAcccs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterAcccs.Designer.cs">
+      <DependentUpon>RegisterAcccs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomArchive.Designer.cs">
+      <DependentUpon>RoomArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomFrm.Designer.cs">
+      <DependentUpon>RoomFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchedFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchedFrm.Designer.cs">
+      <DependentUpon>SchedFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleLoaderDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleLoaderDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleLoaderDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleLoaderDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleLoaderDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleLoaderDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleLoaderDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleLoaderDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchSchedule.Designer.cs">
+      <DependentUpon>SearchSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecFrm.Designer.cs">
+      <DependentUpon>SecFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SectionArchived.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionArchived.Designer.cs">
+      <DependentUpon>SectionArchived.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectArchive.Designer.cs">
+      <DependentUpon>SubjectArchive.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccManagement.resx">
+      <DependentUpon>AccManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccManagementArchived.resx">
+      <DependentUpon>AccManagementArchived.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivityLog.resx">
+      <DependentUpon>ActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSubFrm.resx">
+      <DependentUpon>AddSubFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefSchedFrm.resx">
+      <DependentUpon>DefSchedFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacultyArchived.resx">
+      <DependentUpon>FacultyArchived.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFaculty.resx">
+      <DependentUpon>frmFaculty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubj.resx">
+      <DependentUpon>frmSubj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginActivity.resx">
+      <DependentUpon>LoginActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassConfirm.resx">
+      <DependentUpon>PassConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterAcccs.resx">
+      <DependentUpon>RegisterAcccs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomArchive.resx">
+      <DependentUpon>RoomArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomFrm.resx">
+      <DependentUpon>RoomFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchedFrm.resx">
+      <DependentUpon>SchedFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchSchedule.resx">
+      <DependentUpon>SearchSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecFrm.resx">
+      <DependentUpon>SecFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionArchived.resx">
+      <DependentUpon>SectionArchived.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectArchive.resx">
+      <DependentUpon>SubjectArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ScheduleLoaderDBDataSet.xsc">
+      <DependentUpon>ScheduleLoaderDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleLoaderDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet.xss">
+      <DependentUpon>ScheduleLoaderDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet1.xsc">
+      <DependentUpon>ScheduleLoaderDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleLoaderDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet1.xss">
+      <DependentUpon>ScheduleLoaderDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet2.xsc">
+      <DependentUpon>ScheduleLoaderDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleLoaderDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet2.xss">
+      <DependentUpon>ScheduleLoaderDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet3.xsc">
+      <DependentUpon>ScheduleLoaderDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleLoaderDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScheduleLoaderDBDataSet3.xss">
+      <DependentUpon>ScheduleLoaderDBDataSet3.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\84702807_111086067122775_2701420445046931456_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\84936096_111128163785232_5759602370010939392_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\281782089_1170114990495219_5979960075468467356_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\280427952_333353195442387_9133864543600821119_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\282338060_721595808989368_3151580229766758302_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\cvsu_BG-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\104165233_157615729136475_2892287288791678780_n-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\104165233_157615729136475_2892287288791678780_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\kisspng-cavite-state-university-rosario-campus-cavite-stat-5b4d3fff440b01.4785162315317893112787.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\kisspng-cavite-state-university-rosario-campus-naic-cavite-campus-5ac3c66dcb0989.8730052515227797578316.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\rotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\calendar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\calendar %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\planning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\circle %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\watch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\smart-watch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\smartphone-charger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\clock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\navigation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\circular-shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\circle %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\ellipse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\circle %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\new-moon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\new-moon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\check %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\check %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\pngwing.com %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\pngwing.com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\84702807_111086067122775_2701420445046931456_n %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\744776.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\1429650.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\number-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\three %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\number-1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\gradienta-G084bO4wGDA-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\multiply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\check %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\rectangle %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\check %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\11852424_4853433.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\2632712_8728.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Smile-Emoticon-PNG-HD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\backroundGray.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\backroundWhite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\backroundGrayresized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\backroundWhiteresized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\archive %282%29.ico" />
+    <None Include="resources\check-box-empty.png" />
+    <None Include="resources\check-box.png" />
+    <None Include="resources\check-box %281%29.png" />
+    <None Include="resources\check-box %282%29.png" />
+    <None Include="resources\check-box-empty %281%29.png" />
+    <None Include="resources\check-box-empty %282%29.png" />
+    <None Include="resources\check-box-with-check-sign.png" />
+    <Content Include="resources\restore.ico" />
+    <Content Include="restore.ico" />
+    <None Include="resources\loading.png" />
+    <None Include="resources\loading %281%29.png" />
+    <Content Include="resources\book %281%29.ico" />
+    <Content Include="resources\clock %282%29.png" />
+    <None Include="resources\clock %282%291.png" />
+    <Content Include="resources\employees.ico" />
+    <Content Include="resources\home.ico" />
+    <Content Include="resources\home.png" />
+    <None Include="resources\rec.png" />
+    <Content Include="resources\locker.ico" />
+    <Content Include="resources\schedule %281%29.ico" />
+    <Content Include="resources\sections.ico" />
+    <Content Include="resources\Smile-Emoticon-PNG-HD.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

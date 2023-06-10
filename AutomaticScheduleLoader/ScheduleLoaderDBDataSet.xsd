@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ScheduleLoaderDBDataSet" targetNamespace="http://tempuri.org/ScheduleLoaderDBDataSet.xsd" xmlns:mstns="http://tempuri.org/ScheduleLoaderDBDataSet.xsd" xmlns="http://tempuri.org/ScheduleLoaderDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ScheduleLoaderDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ScheduleLoaderDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AutomaticScheduleLoader.Properties.Settings.GlobalReference.Default.ScheduleLoaderDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FacultySchedule_TblTableAdapter" GeneratorDataComponentClassName="FacultySchedule_TblTableAdapter" Name="FacultySchedule_Tbl" UserDataComponentName="FacultySchedule_TblTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ScheduleLoaderDBConnectionString (Settings)" DbObjectName="ScheduleLoaderDB.dbo.FacultySchedule_Tbl" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FacultyCode, Day, Time, SubjectCode, ClassType FROM dbo.FacultySchedule_Tbl</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FacultyCode" DataSetColumn="FacultyCode" />
+              <Mapping SourceColumn="Day" DataSetColumn="Day" />
+              <Mapping SourceColumn="Time" DataSetColumn="Time" />
+              <Mapping SourceColumn="SubjectCode" DataSetColumn="SubjectCode" />
+              <Mapping SourceColumn="ClassType" DataSetColumn="ClassType" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ScheduleLoaderDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ScheduleLoaderDBDataSet" msprop:Generator_DataSetName="ScheduleLoaderDBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FacultySchedule_Tbl" msprop:Generator_RowEvHandlerName="FacultySchedule_TblRowChangeEventHandler" msprop:Generator_RowDeletedName="FacultySchedule_TblRowDeleted" msprop:Generator_RowDeletingName="FacultySchedule_TblRowDeleting" msprop:Generator_RowEvArgName="FacultySchedule_TblRowChangeEvent" msprop:Generator_TablePropName="FacultySchedule_Tbl" msprop:Generator_RowChangedName="FacultySchedule_TblRowChanged" msprop:Generator_RowChangingName="FacultySchedule_TblRowChanging" msprop:Generator_TableClassName="FacultySchedule_TblDataTable" msprop:Generator_RowClassName="FacultySchedule_TblRow" msprop:Generator_TableVarName="tableFacultySchedule_Tbl" msprop:Generator_UserTableName="FacultySchedule_Tbl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FacultyCode" msprop:Generator_ColumnPropNameInRow="FacultyCode" msprop:Generator_ColumnPropNameInTable="FacultyCodeColumn" msprop:Generator_ColumnVarNameInTable="columnFacultyCode" msprop:Generator_UserColumnName="FacultyCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Day" msprop:Generator_ColumnPropNameInRow="Day" msprop:Generator_ColumnPropNameInTable="DayColumn" msprop:Generator_ColumnVarNameInTable="columnDay" msprop:Generator_UserColumnName="Day" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Time" msprop:Generator_ColumnPropNameInRow="Time" msprop:Generator_ColumnPropNameInTable="TimeColumn" msprop:Generator_ColumnVarNameInTable="columnTime" msprop:Generator_UserColumnName="Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubjectCode" msprop:Generator_ColumnPropNameInRow="SubjectCode" msprop:Generator_ColumnPropNameInTable="SubjectCodeColumn" msprop:Generator_ColumnVarNameInTable="columnSubjectCode" msprop:Generator_UserColumnName="SubjectCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClassType" msprop:Generator_ColumnPropNameInRow="ClassType" msprop:Generator_ColumnPropNameInTable="ClassTypeColumn" msprop:Generator_ColumnVarNameInTable="columnClassType" msprop:Generator_UserColumnName="ClassType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
